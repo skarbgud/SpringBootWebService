@@ -1,5 +1,6 @@
 package com.gyuhyeong.example.springboot.config.auth;
 
+import com.gyuhyeong.example.springboot.config.auth.dto.OAuthAttributes;
 import com.gyuhyeong.example.springboot.config.auth.dto.SessionUser;
 import com.gyuhyeong.example.springboot.domain.user.User;
 import com.gyuhyeong.example.springboot.domain.user.UserRepository;

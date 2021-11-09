@@ -1,4 +1,4 @@
-package com.gyuhyeong.example.springboot.config.auth;
+package com.gyuhyeong.example.springboot.config.auth.dto;
 
 import com.gyuhyeong.example.springboot.domain.user.Role;
 import com.gyuhyeong.example.springboot.domain.user.User;
