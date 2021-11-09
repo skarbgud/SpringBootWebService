@@ -1,5 +1,6 @@
 package com.gyuhyeong.example.springboot.domain.user;
 
+import com.gyuhyeong.example.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class User {
+public class User extends BaseTimeEntity {
 
     @Id // 해당 테이블의 PK 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK의 생성 규칙. 스트링부트 2.0에서는 GenerationType.IDENTITY 옵션을 추가해야지만 auto_increment가 된다
