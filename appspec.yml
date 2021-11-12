@@ -14,5 +14,5 @@ permissions: #CodeDeploy에서 EC2 서버로 넘겨준 파일들을 모두 ec2-u
 hooks: # CodeDeploy 배포 단계에서 실행할 명령어를 지정
   ApplicationStart: # ApplicationStart 단계에서 deploy.sh를 ec2-user 권한으로 실행하게 합니다.
     - location: deploy.sh
-      timeout: 60 #60으로 스크립트 실행 60초 이상 수행되면 실패가 되도록한다.(무한정 기다릴 수 없으니 시간 제한을 두어야함)
-      runas: ec2-user
+  timeout: 60 #60으로 스크립트 실행 60초 이상 수행되면 실패가 되도록한다.(무한정 기다릴 수 없으니 시간 제한을 두어야함)
+  runas: ec2-user
