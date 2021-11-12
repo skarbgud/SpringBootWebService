@@ -14,11 +14,15 @@ cache:
 
 script: "./gradlew clean build"
 
+# 설치시 권한 추가
 before_install:
+  - chmod +x gradlew
+
+#배포 전
+before_deploy:
   - mkdir -p before-deploy # zip에 포함시킬 파일들을 담을 디렉토리 생성
   - cp scripts/*.sh before-deploy/
   - cp appspec.yml before-deploy/
-  - ls
   - cp build/libs/*.jar before-deploy/
   - cd before-deploy && zip -r before-deploy * # before-deploy로 이동후 전체 압축
   - cd ../ && mkdir -p deploy # 상위 디렉토리로 이동후 deploy 디렉토리 생성
